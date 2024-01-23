@@ -420,7 +420,7 @@ Haunted_house = [
 
 def pick_starter(player):
     print(
-        f"{player.name}... Interesting... Well, welcome to the newly opened Safari Park, please select a starter."
+        f"{player.name}... Interesting... Well, welcome to the newly opened Safari Park, please choose a starter."
     )
     while True:
         print(
@@ -491,8 +491,8 @@ def area_movement(location):
                 listing_locations = ""
                 for i in location.connections:
                     listing_locations += f"'{i}', "
-                print(f"{listing_locations}or 'Fly Home'")
-        elif destination == "Fly Home":
+                print(f"{listing_locations}or <Fly Back>")
+        elif destination == "Fly Back":
             location = AREA["Safari Counter"]
             return location
         else:
@@ -501,7 +501,7 @@ def area_movement(location):
             listing_locations = ""
             for i in location.connections:
                 listing_locations += f"'{i}', "
-            print(f"{listing_locations}or 'Fly Home'")
+            print(f"{listing_locations}or <Fly Back>")
 
 
 def encounter(player, location):
